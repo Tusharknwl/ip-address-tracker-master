@@ -1,68 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
-
-  <!-- add map styles -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-  crossorigin=""/>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-  crossorigin=""></script>
-
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  
-  <title>Frontend Mentor | IP Address Tracker</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>Document</title>
 </head>
+
 <body>
+  <div class="main_page">
+    <div class="top_section">
 
-  <h1 class="header">IP Address Tracker</h1>
+      <h1>IP Address Tracker</h1>
 
-  <form class="form">
-    <div class="search">
-      <input type="text" class="input" placeholder="Search for any IP address or domain">
-      <button id="btn" class="button">></button>
+      <div class="input_btn">
+        <input type="text" id="inputIP" placeholder="Search for any IP address or domain">
+        <button class="btn" onclick="start()">></button>
+      </div>
+
+      <div class="detail">
+        <div>
+          <p>IPADDRESS</p>
+          <h6>`{data.ip}`</h6>
+        </div>
+        <div>
+          <p>LOCATION</p>
+          <h6>Brooklyn,NY <br>10001</h6>
+        </div>
+        <div>
+          <p>TIMEZONE</p>
+          <h6>UTC - 05:00</h6>
+        </div>
+        <div>
+          <p>ISP</p>
+          <h6>SpaceX <br>Starlink</h6>
+        </div>
+      </div>
+
     </div>
-  </form>
-
-  <div class="container">
-    <div class="ip">
-      <h2>IP ADDRESS</h2>
-      0.0.0
+    <div class="map_section">
+      <!-- <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4413.390986356311!2d168.74735991501828!3d-45.01066987166534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa9d51e4995bc67d5%3A0x62de73961b0f84b9!2sPAK&#39;nSAVE%20Queenstown!5e0!3m2!1sen!2snp!4v1653806273819!5m2!1sen!2snp"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe> -->
     </div>
-    <div class="loc">
-      <h2>LOCATION</h2>
-      india
-    </div>
-    <div class="timeZone">
-      <h2>TIMEZONE</h2>
-      1:20
-    </div>
-    <div class="isp">
-      <h2>ISP</h2>
-      airtel
-    </div>
-  </div>
-
-
-  <div id="map"></div>
-  <!-- <script>var map = L.map('map').setView([51.505, -0.09], 13);</script> -->
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
+
 </html>
